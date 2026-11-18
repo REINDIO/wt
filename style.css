@@ -472,3 +472,42 @@ body{font-family:system-ui,-apple-system,"Segoe UI","Microsoft JhengHei","PingFa
 .sidebar [data-page="community"].active.has-unread:after{background:white;border-color:#111}
 .pending-task-actions{padding:12px;border-top:1px solid var(--line);flex-shrink:0}
 .pending-task-actions button{width:100%}
+
+.profile-stats{grid-template-columns:repeat(2,1fr)}
+.friends-hub main{display:flex;flex-direction:column;gap:10px}
+.friends-heading{flex-shrink:0}.friends-heading>strong{display:block;padding:6px 4px}.friends-heading small{margin-left:8px}
+.friends-tabs{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.friends-tabs button{border:0;border-radius:0;background:transparent;font-size:13px;padding:8px 4px}
+.friends-tabs .selected{border-bottom:2px solid #111;font-weight:bold}
+.friends-hub .inbox{flex:1;height:auto;min-height:0}
+.friends-content{flex:1;min-height:0;overflow:auto}
+.friend-item{display:flex;align-items:center;gap:8px;padding:12px 4px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.friend-item>div{flex:1;min-width:110px}.friend-item small,.friend-post small{display:block}.friend-item button{padding:8px;font-size:12px}
+.friend-post{padding:16px 4px;border-bottom:1px solid var(--line)}.friend-post p{white-space:pre-wrap;margin:10px 0}
+
+.friend-record-text{white-space:pre-wrap;overflow-wrap:anywhere}
+
+.friends-tabs{grid-template-columns:repeat(3,1fr)}
+.friend-request-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:currentColor;margin-left:6px;vertical-align:middle}
+.sidebar [data-page="friends"]{position:relative}
+.sidebar [data-page="friends"].has-unread:after{content:"";position:absolute;top:10px;right:12px;width:8px;height:8px;border-radius:50%;background:#111;border:1px solid white}
+.sidebar [data-page="friends"].active.has-unread:after{background:white;border-color:#111}
+
+.friend-item>.friend-actions{display:flex;flex:0 0 auto;min-width:0;gap:6px;align-items:center}
+.friend-actions button{white-space:nowrap;min-height:44px}
+@media(max-width:600px){.friend-item>.friend-actions{flex-basis:100%;justify-content:flex-end}.friend-item{gap:8px;padding:12px 4px}.friend-actions button{padding:8px 12px}}
+
+/* Compact friend rows retain a full-size touch target without bulky buttons. */
+.friend-item{flex-wrap:nowrap;padding:8px 0;gap:8px;min-height:64px}
+.friend-item>.avatar{width:40px;height:40px;font-size:16px}
+.friend-item>div:not(.friend-actions){min-width:0;flex:1}
+.friend-item strong,.friend-item small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.friend-item strong{font-size:14px}.friend-item small{font-size:11px}
+.friend-item>.friend-actions{flex:0 0 auto;flex-basis:auto;gap:0;justify-content:flex-end}
+.friend-item .friend-icon-action{display:grid;place-items:center;width:44px;height:44px;min-height:44px;padding:11px;border:0;border-radius:50%;background:transparent}
+.friend-icon-action svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.friend-item .friend-icon-action:hover{background:#eee}
+
+.person-avatar{padding:0;border:0;min-height:0}.avatar[data-person],.profile-avatar[data-person]{cursor:pointer}.avatar[data-person]:focus-visible,.profile-avatar[data-person]:focus-visible{outline:2px solid #111;outline-offset:3px}
+
+.friends-heading{position:relative}.friends-heading>strong{padding-right:50px}.friend-list-edit{position:absolute;right:0;top:0;min-width:44px;height:36px;min-height:36px;padding:6px;display:grid;place-items:center}.friend-list-edit svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round}
