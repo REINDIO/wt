@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#161616" />
+  <!-- 極簡 w 幾何筆劃 -->
+  <path
+    d="M104 216 L154 368 L216 244 L278 368 L328 216"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="46"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- 右上角 ↗ 行動箭頭 -->
+  <path
+    d="M332 192 L416 108 M346 108 L416 108 L416 178"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="34"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

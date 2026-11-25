@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #fafafa;
+  --color-panel: #ffffff;
+  --color-sidebar: #f3f3f3;
+  --color-ink: #141414;
+  --color-brand: #161616;
+  --color-muted: #737373;
+  --color-line: #e3e3e3;
+  --font-sans: system-ui, -apple-system, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    overscroll-behavior-y: none;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: default;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid #777777;
+    outline-offset: 2px;
+  }
+}
+
+/* 原生 dialog 遮罩毛玻璃效果 */
+dialog::backdrop {
+  background: rgba(43, 43, 43, 0.54);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* details 預設小箭頭隱藏（僅用於自訂加號選單） */
+.media-add-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 任務卡片微動效 */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-card-in {
+    animation: cardAppear 0.24s ease;
+  }
+  @keyframes cardAppear {
+    from {
+      opacity: 0.35;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
